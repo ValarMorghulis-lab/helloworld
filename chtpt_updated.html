@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Vacation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        input, select, textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background: #5cb85c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Vacation Form</h1>
+        <form action="submit-vacation.php" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="student-id">Student ID:</label>
+            <input type="text" id="student-id" name="student-id" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="destination">Vacation Destination:</label>
+            <input type="text" id="destination" name="destination" required>
+
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date" required>
+
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date" required>
+
+            <label for="purpose">Purpose of Vacation:</label>
+            <select id="purpose" name="purpose" required>
+                <option value="">Select</option>
+                <option value="leisure">Leisure</option>
+                <option value="family-visit">Family Visit</option>
+                <option value="study-abroad">Study Abroad</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="activities">Planned Activities:</label>
+            <textarea id="activities" name="activities" rows="4" required></textarea>
+
+            <label for="emergency-contact">Emergency Contact Name:</label>
+            <input type="text" id="emergency-contact" name="emergency-contact" required>
+
+            <label for="emergency-phone">Emergency Contact Phone Number:</label>
+            <input type="tel" id="emergency-phone" name="emergency-phone" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
